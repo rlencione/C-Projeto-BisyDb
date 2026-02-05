@@ -57,9 +57,9 @@ label_base = tk.Label(
     janela,
     bg="#000000",
     text="BASE",
-    fg="#D2CFCF",
     font=("Arial", 11, "bold"),
-    width=10
+    width=10,
+    fg="#D2CFCF",
 )    
 label_base.place(x=10, y=175)
 entry_base = tk.Entry(
@@ -74,10 +74,11 @@ entry_base.place(x=10, y=200,)
 # bislog
 label_log_bis = tk.Label(
     janela,
-    bg="#D3DADB",
+    bg="#000000",
     text="BISLOG",
     font=("Arial", 12, "bold"),
-    width=10
+    width=10,
+    fg="#D2CFCF",
 )
 label_log_bis.place(x=130, y=175)
 entry_log_bis = tk.Entry(
@@ -92,12 +93,13 @@ entry_log_bis.place(x=130, y=200)
 # Client
 label_client = tk.Label(
     janela,
-    bg="#D3DADB",
+    bg="#000000",
     text="CLIENT",
     font=("Arial", 12, "bold"),
-    width=10
+    width=10,
+    fg="#D2CFCF",
 )
-label_client.place(x=230, y=175)
+label_client.place(x=243, y=175)
 entry_client = tk.Entry(
     janela,
     bg="#B8B8B9",
@@ -105,17 +107,18 @@ entry_client = tk.Entry(
     font=("Arial", 12, "bold"),
     width=11
 )
-entry_client.place(x=230, y=200)
+entry_client.place(x=250, y=200)
 
 # Logbook
 label_logbook = tk.Label(
     janela,
-    bg="#D3DADB",
+    bg="#000000",
     text="LOGBOOK",
     font=("Arial", 12, "bold"),
-    width=10
+    width=8,
+    fg="#D2CFCF",
 )
-label_logbook.place(x=330, y=175)
+label_logbook.place(x=378, y=175)
 entry_logbook = tk.Entry(
     janela,
     bg="#B8B8B9",
@@ -123,89 +126,94 @@ entry_logbook = tk.Entry(
     font=("Arial", 12, "bold"),
     width=11
 )
-entry_logbook.place(x=330, y=200)
+entry_logbook.place(x=370, y=200)
 
 # date
 label_log_date = tk.Label(
     janela,
-    bg="#D3DADB",
+    bg="#000000",
     text="DATE",
     font=("Arial", 12, "bold"),
-    width=10
+    width=8,
+    fg="#D2CFCF",
 )
-label_log_date.place(x=430, y=175)
+label_log_date.place(x=485, y=175)
 entry_log_date = tk.Entry(
     janela,
     bg="#B8B8B9",
     fg="black",
     font=("Arial", 12, "bold"),
-    width=11
+    width=8,
 )
-entry_log_date.place(x=430, y=200)
+entry_log_date.place(x=490, y=200)
 
 # oil_lh
 label_oil_lh = tk.Label(
     janela,
-    text="ENG LH",
-    bg="#D3DADB",
+    text="LH",
+    bg="#000000",
     font=("Arial", 12, "bold"),
-    width=10
+    width=5,
+    fg="#D2CFCF",
 )
-label_oil_lh.place(x=530, y=175)
+label_oil_lh.place(x=580, y=175)
 entry_oil_lh = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
     fg="black",                         # cor do texto
     font=("Arial", 12, "bold"),                # fonte e tamanho
-    width=11
+    width=5
 )
-entry_oil_lh.place(x=530, y=200)
+entry_oil_lh.place(x=582, y=200)
 
 # oil_rh
 label_oil_rh = tk.Label(
     janela,
-    text="ENG RH",
-    bg="#D3DADB",
+    text="RH",
+    bg="#000000",
     font=("Arial", 12, "bold"),
-    width=10
+    width=5,
+    fg="#D2CFCF",
 )
-label_oil_rh.place(x=630, y=175)
+label_oil_rh.place(x=640, y=175)
 entry_oil_rh = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
     fg="black",                         # cor do texto
     font=("Arial", 12, "bold"),                # fonte e tamanho
-    width=11
+    width=5
 )
-entry_oil_rh.place(x=630, y=200)
+entry_oil_rh.place(x=645, y=200)
 
-# oil_a
+# oil_apu
 label_oil_apu = tk.Label(
     janela,
-    text="APU OIL",
-    bg="#D3DADB",
+    text="APU",
+    bg="#000000",
     font=("Arial", 12, "bold"),
-    width=10
+    width=5,
+    fg="#D2CFCF",
 )
-label_oil_apu.place(x=730, y=175)
+label_oil_apu.place(x=705, y=175)
 entry_oil_apu = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
     fg="black",                         # cor do texto
     font=("Arial", 12, "bold"),                # fonte e tamanho
-    width=11
+    width=5
 )
-entry_oil_apu.place(x=730, y=200)
+entry_oil_apu.place(x=708, y=200)
 
 # technician
 label_log_AMT = tk.Label(
     janela,
     text="TECHNICIAN",
-    bg="#D3DADB",
+    bg="#000000",
     font=("Arial", 12, "bold"),
-    width=10
+    width=10,
+    fg="#D2CFCF",
 )
-label_log_AMT.place(x=830, y=175)
+label_log_AMT.place(x=768, y=175)
 entry_log_AMT = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
@@ -213,15 +221,16 @@ entry_log_AMT = tk.Entry(
     font=("Arial", 12, "bold"),                # fonte e tamanho
     width=11
 )
-entry_log_AMT.place(x=830, y=200)
+entry_log_AMT.place(x=770, y=200)
 
 # Report
 label_report = tk.Label(
     janela,
     text="REPORT",
-    bg="#D3DADB",
+    bg="#000000",
     font=("Arial", 12, "bold"),
-    width=10
+    width=10,
+    fg="#D2CFCF",
 )
 label_report.place(x=10, y=250)
 entry_report = tk.Text(
@@ -229,7 +238,7 @@ entry_report = tk.Text(
     bg="#B8B8B9",                  
     fg="black",                         
     font=("Arial", 12, "bold"),                
-    width=80, height=5, borderwidth=4, 
+    width=82, height=5, borderwidth=4, 
 )
 entry_report.place(x=10, y=275)
 
@@ -237,9 +246,10 @@ entry_report.place(x=10, y=275)
 label_action = tk.Label(
     janela,
     text="ACTION",
-    bg="#D3DADB",
+    bg="#000000",
     font=("Arial", 12, "bold"),
-    width=10
+    width=10,
+    fg="#D2CFCF",
 )
 label_action.place(x=10, y=410)
 entry_action = tk.Text(
@@ -247,7 +257,7 @@ entry_action = tk.Text(
     bg="#B8B8B9",                  # cor de fundo
     fg="black",                         # cor do texto
     font=("Arial", 12, "bold"),                # fonte e tamanho
-    width=80, height=5, borderwidth=4, 
+    width=82, height=5, borderwidth=4, 
 )
 entry_action.place(x=10, y=435)
 
@@ -255,11 +265,12 @@ entry_action.place(x=10, y=435)
 label_image = tk.Label(
     janela,
     text="IMAGE",
-    bg="#D3DADB",
+    bg="#000000",
     font=("Arial", 12, "bold"),
-    width=10
+    width=10,
+    fg="#D2CFCF",
 )
-label_image.place(x=880, y=280)
+label_image.place(x=758, y=250)
 entry_image = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
@@ -267,7 +278,7 @@ entry_image = tk.Entry(
     font=("Arial", 12, "bold"),                # fonte e tamanho
     width=11
 )
-entry_image.place(x=880, y=305)
+entry_image.place(x=770, y=275)
 
 # Lista de entradas para facilitar limpeza
 entradas = [entry_base, entry_log_bis, entry_client, entry_logbook, entry_log_date,
