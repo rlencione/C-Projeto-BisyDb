@@ -17,7 +17,7 @@ def enviar_dados():
         "TECHNICIAN": entry_log_AMT.get(),
         "REPORT": entry_report.get("1.100", "end-1c"),
         "ACTION": entry_action.get("1.100", "end-1c"),
-        "IMAGE": entry_image.get(),
+        # "IMAGE": entry_image.get(),
     }
 
     # Exibe os dados coletados
