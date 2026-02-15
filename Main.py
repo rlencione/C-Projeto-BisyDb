@@ -6,17 +6,17 @@ from PIL import Image, ImageTk
 
 def enviar_dados():
     dados = {
-        "BASE": entry_base.get(),
-        "BISLOG": entry_bis_log.get(),
-        "CLIENT": entry_client.get(),
-        "LOGDATE": entry_log_date.get(),
-        "LOGBOOK": entry_logbook.get(),
-        "ENG OIL LH": entry_oil_lh.get(),
-        "ENG OIL RH": entry_oil_rh.get(),
-        "APU OIL": entry_oil_apu.get(),
-        "TECHNICIAN": entry_log_AMT.get(),
-        "REPORT": entry_report.get("1.100", "end-1c"),
-        "ACTION": entry_action.get("1.100", "end-1c"),
+        "BASE": base.get(),
+        "BISLOG": bis_log.get(),
+        "CLIENT": client.get(),
+        "LOGDATE": log_date.get(),
+        "LOGBOOK": logbook.get(),
+        "ENG OIL LH": oil_lh.get(),
+        "ENG OIL RH": oil_rh.get(),
+        "APU OIL": oil_apu.get(),
+        "TECHNICIAN": log_AMT.get(),
+        "REPORT": report.get(),
+        "ACTION": action.get(),
         # "IMAGE": entry_image.get(),
     }
 
@@ -27,7 +27,7 @@ def enviar_dados():
 
     # Limpa os campos
     for entry in entradas:
-        entry.delete("1.0", tk.END)
+        entry.delete("0", tk.END)
 
 
 # Criando janela principal
@@ -64,14 +64,14 @@ label_base = tk.Label(
     fg="#D2CFCF",
 )
 label_base.place(x=8, y=175)
-entry_base = tk.Entry(
+base = tk.Entry(
     janela,
     bg="#B8B8B9",
     fg="black",
     font=("Arial", 12, "bold"),
     width=11,
 )
-entry_base.place(x=10, y=200,)
+base.place(x=10, y=200,)
 
 # bislog
 label_bis_log = tk.Label(
@@ -83,14 +83,14 @@ label_bis_log = tk.Label(
     fg="#D2CFCF",
 )
 label_bis_log.place(x=125, y=175)
-entry_bis_log = tk.Entry(
+bis_log = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
     fg="black",                         # cor do texto
     font=("Arial", 12, "bold"),                # fonte e tamanho
     width=11
 )
-entry_bis_log.place(x=130, y=200)
+bis_log.place(x=130, y=200)
 
 # Client
 label_client = tk.Label(
@@ -102,14 +102,14 @@ label_client = tk.Label(
     fg="#D2CFCF",
 )
 label_client.place(x=243, y=175)
-entry_client = tk.Entry(
+client = tk.Entry(
     janela,
     bg="#B8B8B9",
     fg="black",
     font=("Arial", 12, "bold"),
     width=11
 )
-entry_client.place(x=250, y=200)
+client.place(x=250, y=200)
 
 # Logbook
 label_logbook = tk.Label(
@@ -121,14 +121,14 @@ label_logbook = tk.Label(
     fg="#D2CFCF",
 )
 label_logbook.place(x=378, y=175)
-entry_logbook = tk.Entry(
+logbook = tk.Entry(
     janela,
     bg="#B8B8B9",
     fg="black",
     font=("Arial", 12, "bold"),
     width=11
 )
-entry_logbook.place(x=370, y=200)
+logbook.place(x=370, y=200)
 
 # date
 label_log_date = tk.Label(
@@ -140,14 +140,14 @@ label_log_date = tk.Label(
     fg="#D2CFCF",
 )
 label_log_date.place(x=488, y=175)
-entry_log_date = tk.Entry(
+log_date = tk.Entry(
     janela,
     bg="#B8B8B9",
     fg="black",
     font=("Arial", 12, "bold"),
     width=11,
 )
-entry_log_date.place(x=485, y=200)
+log_date.place(x=485, y=200)
 
 # oil_lh
 label_oil_lh = tk.Label(
@@ -159,14 +159,14 @@ label_oil_lh = tk.Label(
     fg="#D2CFCF",
 )
 label_oil_lh.place(x=598, y=175)
-entry_oil_lh = tk.Entry(
+oil_lh = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
     fg="black",                         # cor do texto
     font=("Arial", 12, "bold"),                # fonte e tamanho
     width=5
 )
-entry_oil_lh.place(x=602, y=200)
+oil_lh.place(x=602, y=200)
 
 # oil_rh
 label_oil_rh = tk.Label(
@@ -178,14 +178,14 @@ label_oil_rh = tk.Label(
     fg="#D2CFCF",
 )
 label_oil_rh.place(x=660, y=175)
-entry_oil_rh = tk.Entry(
+oil_rh = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
     fg="black",                         # cor do texto
     font=("Arial", 12, "bold"),                # fonte e tamanho
     width=5
 )
-entry_oil_rh.place(x=665, y=200)
+oil_rh.place(x=665, y=200)
 
 # oil_apu
 label_oil_apu = tk.Label(
@@ -197,14 +197,14 @@ label_oil_apu = tk.Label(
     fg="#D2CFCF",
 )
 label_oil_apu.place(x=725, y=175)
-entry_oil_apu = tk.Entry(
+oil_apu = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
     fg="black",                         # cor do texto
     font=("Arial", 12, "bold"),                # fonte e tamanho
     width=5
 )
-entry_oil_apu.place(x=728, y=200)
+oil_apu.place(x=728, y=200)
 
 # technician
 label_log_AMT = tk.Label(
@@ -216,14 +216,14 @@ label_log_AMT = tk.Label(
     fg="#D2CFCF",
 )
 label_log_AMT.place(x=788, y=175)
-entry_log_AMT = tk.Entry(
+log_AMT = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
     fg="black",                         # cor do texto
     font=("Arial", 12, "bold"),                # fonte e tamanho
     width=11
 )
-entry_log_AMT.place(x=790, y=200)
+log_AMT.place(x=790, y=200)
 
 # Report
 label_report = tk.Label(
@@ -235,14 +235,14 @@ label_report = tk.Label(
     fg="#D2CFCF",
 )
 label_report.place(x=10, y=250)
-entry_report = tk.Text(
+report = tk.Entry(
     janela,
     bg="#B8B8B9",
     fg="black",
     font=("Arial", 12, "bold"),
-    width=82, height=5, borderwidth=4,
+    width=82, borderwidth=4,
 )
-entry_report.place(x=10, y=275)
+report.place(x=10, y=275)
 
 # Action
 label_action = tk.Label(
@@ -254,14 +254,14 @@ label_action = tk.Label(
     fg="#D2CFCF",
 )
 label_action.place(x=10, y=410)
-entry_action = tk.Text(
+action = tk.Entry(
     janela,
     bg="#B8B8B9",                  # cor de fundo
     fg="black",                         # cor do texto
     font=("Arial", 12, "bold"),                # fonte e tamanho
-    width=82, height=5, borderwidth=4,
+    width=82, borderwidth=4,
 )
-entry_action.place(x=10, y=435)
+action.place(x=10, y=435)
 
 # Image
 # label_image = tk.Label(
@@ -283,8 +283,8 @@ entry_action.place(x=10, y=435)
 # entry_image.place(x=770, y=275)
 
 # Lista de entradas para facilitar limpeza
-entradas = [entry_base, entry_bis_log, entry_client, entry_logbook, entry_log_date,
-            entry_oil_lh, entry_oil_rh, entry_oil_apu, entry_report, entry_action,]  # entry_image]
+entradas = [base, bis_log, client, logbook, log_date,
+            oil_lh, oil_rh, oil_apu, report, action,]  # image]
 
 # Botão de envio
 btn_enviar = tk.Button(

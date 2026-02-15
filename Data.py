@@ -1,5 +1,6 @@
 import mysql.connector
 
+
 try:
     # Criando a conexão
     conexao = mysql.connector.connect(
@@ -13,10 +14,20 @@ try:
         print("Conexão realizada com sucesso!")
 
         # Criando um cursor para executar comandos SQL
-        cursor = conexao.cursor()
+        cursor = conexao.cursor(buffered=True)
+
+        comando = f'INSERT INTO bis_log_table (base, log_bis, client, ' \
+            'log_date, logbook, log_AMT, oil_lh, oil_rh, oil_apu, entry_report, ' \
+            'entry_action) VALUES ({base}, {bis_log}, {client},{log_date}, {logbook}, {oil_lh}, {oil_rh}, {oil_apu}, ' \
+            '{log_AMT}, {report}, {action})'
 
         # Exemplo de consulta
-        cursor.execute("SELECT DATABASE();")
+        cursor.execute(" SELECT DATABASE();")
+
+        # Edita o banco de dados
+        conexao.commit()
+
+        # Lê o banco de dadosentry_logbook
         resultado = cursor.fetchone()
         print("Banco de dados conectado:", resultado)
 
